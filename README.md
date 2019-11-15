@@ -50,7 +50,7 @@ Implement parameter feature to each action. Right now they are hard coded in the
 </pre>
 
 #### Use subnet.list.txt to create default action
-0.0.0.0/0,payload-4
+<pre>0.0.0.0/0,payload-4</pre>
 
 
 # Helpful Commands
