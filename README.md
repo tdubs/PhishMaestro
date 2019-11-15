@@ -24,7 +24,7 @@ The monitor.pl script watches the sessions-queue directory for new files. When a
 
 A file is then created under session-actions directory. The filename is the PHP_SESSION_ID and the contents contain the action you chose. The file in the queue directory is then moved to the log-sessions directory.
 
-##Future Features
+## Future Features
 
 Change the client side experience so rather than the page just waiting to load it uses an ajax like call to show a 'Please wait while we log you in' and query the server for the response
 
