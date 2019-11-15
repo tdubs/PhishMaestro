@@ -1,0 +1,1 @@
+This directory is where each new HTTP session is displayed as a new file with the parameters of that session. The file is created by the submit.php file and then you make decisions on how to handle it with the monitor.pl script.

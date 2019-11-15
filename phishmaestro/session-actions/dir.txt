@@ -1,0 +1,1 @@
+This directory stores a file for each HTTP session which you've chosen an action for.
