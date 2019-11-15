@@ -43,9 +43,11 @@ Implement parameter feature to each action. Right now they are hard coded in the
 
 
 # Subnet File
-subnet,action,parameter
+<pre>
+#subnet,action,parameter
 1.1.1.0/24,payload1,
 2.2.2.0/24,redirect,http://innocuous.com
+</pre>
 
 #### Use subnet.list.txt to create default action
 0.0.0.0/0,payload-4
