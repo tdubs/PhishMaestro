@@ -9,6 +9,19 @@ Defaults parameters are:
 
 Add whatever variables you wish to track, and automate it!
 
+# Setup
+Save the root contents of the project to your web server root directory (/var/www/html/)
+Run the following commands:
+<pre>
+chmod a+x monitor.pl
+chown www-data phishmaestro/* -R
+</pre>
+
+Configure each of your payloads under the phishmaestro/payloads/ directory.
+Right now all the payload files are simply html pages which you should embed your payload in.
+
+Then run monitor.pl
+
 
 # General Logic Flow
 When a user hits the index.html page you'll prompt them for their credenitals. The credentials are submitted to the 'submit.php' at which point a PHP session is started.
